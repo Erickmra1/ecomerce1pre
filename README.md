@@ -1,73 +1,146 @@
-# Welcome to your Lovable project
+# EcoShop - E-commerce Moderno
 
-## Project info
+## Sobre o Projeto
 
-**URL**: https://lovable.dev/projects/d03c1db4-fb97-454d-815d-2327ad9aa35c
+**EcoShop** é uma plataforma de e-commerce moderna e responsiva, desenvolvida com as mais recentes tecnologias web. O projeto oferece uma experiência de compra completa com design elegante, funcionalidades avançadas e performance otimizada.
 
-## How can I edit this code?
+**URL do Projeto**: https://lovable.dev/projects/d03c1db4-fb97-454d-815d-2327ad9aa35c
 
-There are several ways of editing your application.
+## ✨ Funcionalidades
 
-**Use Lovable**
+- 🛍️ **Catálogo de Produtos**: Navegação intuitiva com filtros por categoria e preço
+- 🔍 **Busca Avançada**: Sistema de pesquisa em tempo real
+- 🛒 **Carrinho de Compras**: Gerenciamento completo de itens
+- 📱 **Design Responsivo**: Otimizado para desktop, tablet e mobile
+- 🎨 **Interface Moderna**: Design system consistente com Tailwind CSS
+- ⭐ **Avaliações**: Sistema de rating e reviews
+- 💳 **Checkout Seguro**: Processo de compra simplificado
+- 🚀 **Performance**: Carregamento rápido e otimizado
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d03c1db4-fb97-454d-815d-2327ad9aa35c) and start prompting.
+## 🛠 Tecnologias Utilizadas
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend**: React 18 + TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Roteamento**: React Router DOM
+- **Estado**: Context API + React Hooks
+- **Ícones**: Lucide React
+- **Deploy**: Lovable Platform
 
-**Use your preferred IDE**
+## 🚀 Como Executar o Projeto
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Pré-requisitos
+- Node.js (versão 16 ou superior)
+- npm ou yarn
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Instalação
 
-Follow these steps:
+```bash
+# 1. Clone o repositório
+git clone <URL_DO_SEU_REPOSITORIO>
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# 2. Entre no diretório do projeto
+cd ecoshop
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# 3. Instale as dependências
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 4. Execute o projeto em modo de desenvolvimento
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+O projeto estará disponível em `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📂 Estrutura do Projeto
 
-**Use GitHub Codespaces**
+```
+src/
+├── components/          # Componentes reutilizáveis
+│   ├── ui/             # Componentes base (shadcn/ui)
+│   ├── Header.tsx      # Cabeçalho da aplicação
+│   ├── Footer.tsx      # Rodapé
+│   ├── ProductCard.tsx # Card de produto
+│   └── HeroSection.tsx # Seção hero da homepage
+├── contexts/           # Contextos do React
+│   └── CartContext.tsx # Gerenciamento do carrinho
+├── hooks/             # Hooks customizados
+│   └── useSearch.tsx  # Hook para busca de produtos
+├── pages/             # Páginas da aplicação
+│   ├── Index.tsx      # Homepage
+│   ├── Products.tsx   # Listagem de produtos
+│   ├── ProductDetail.tsx # Detalhes do produto
+│   └── Cart.tsx       # Página do carrinho
+├── lib/               # Utilitários
+└── styles/            # Estilos globais
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🎨 Design System
 
-## What technologies are used for this project?
+O projeto utiliza um design system consistente baseado em:
 
-This project is built with:
+- **Cores**: Sistema de cores semânticas
+- **Tipografia**: Hierarquia tipográfica clara
+- **Componentes**: Biblioteca shadcn/ui customizada
+- **Animações**: Transições suaves e micro-interações
+- **Responsividade**: Mobile-first approach
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🛒 Funcionalidades Implementadas
 
-## How can I deploy this project?
+### ✅ Concluídas
+- [x] Homepage com hero section
+- [x] Catálogo de produtos com filtros
+- [x] Sistema de busca
+- [x] Carrinho de compras
+- [x] Página de detalhes do produto
+- [x] Design responsivo
+- [x] Sistema de avaliações
+- [x] Gerenciamento de estoque
 
-Simply open [Lovable](https://lovable.dev/projects/d03c1db4-fb97-454d-815d-2327ad9aa35c) and click on Share -> Publish.
+### 🔄 Em Desenvolvimento
+- [ ] Autenticação de usuários
+- [ ] Integração com Supabase
+- [ ] Sistema de pagamento (Stripe)
+- [ ] Painel administrativo
+- [ ] Histórico de pedidos
+- [ ] Sistema de cupons
 
-## Can I connect a custom domain to my Lovable project?
+## 📱 Como Editar o Código
 
-Yes, you can!
+### **Usando Lovable (Recomendado)**
+1. Acesse o [Projeto no Lovable](https://lovable.dev/projects/d03c1db4-fb97-454d-815d-2327ad9aa35c)
+2. Use prompts em português para fazer alterações
+3. As mudanças são commitadas automaticamente
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### **Usando seu IDE Favorito**
+1. Clone o repositório
+2. Faça suas alterações localmente
+3. Commit e push para o repositório
+4. As mudanças aparecerão automaticamente no Lovable
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### **Editando Diretamente no GitHub**
+1. Navegue até o arquivo desejado
+2. Clique no ícone de edição (lápis)
+3. Faça suas alterações e commit
+
+## 🚀 Deploy
+
+### Deploy Automático
+1. Abra o [Lovable](https://lovable.dev/projects/d03c1db4-fb97-454d-815d-2327ad9aa35c)
+2. Clique em "Share" → "Publish"
+3. Sua aplicação estará disponível publicamente
+
+### Domínio Customizado
+Para conectar um domínio próprio:
+1. Vá em Project → Settings → Domains
+2. Clique em "Connect Domain"
+3. Siga as instruções de configuração
+
+## 📞 Suporte
+
+Para dúvidas ou sugestões:
+- Documentação: [Lovable Docs](https://docs.lovable.dev/)
+- Comunidade: [Discord Lovable](https://discord.com/channels/1119885301872070706/1280461670979993613)
+
+---
+
+Desenvolvido com ❤️ usando [Lovable](https://lovable.dev)
