@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Filter, Grid, List, SortAsc } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/ProductCard";
@@ -6,6 +7,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { useSearch } from "@/hooks/useSearch";
 
 // Mock data
 const mockProducts = [
@@ -89,11 +91,22 @@ const sortOptions = [
 ];
 
 export default function Products() {
+  const [searchParams] = useSearchParams();
   const [selectedCategory, setSelectedCategory] = useState("Todos");
   const [sortBy, setSortBy] = useState("relevance");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+  
+  const { searchTerm, setSearchTerm, filteredProducts: searchedProducts, isSearching } = useSearch(mockProducts);
 
-  const filteredProducts = mockProducts.filter(product => 
+  // Handle search from URL params
+  useEffect(() => {
+    const searchQuery = searchParams.get("search");
+    if (searchQuery) {
+      setSearchTerm(searchQuery);
+    }
+  }, [searchParams, setSearchTerm]);
+
+  const filteredProducts = searchedProducts.filter(product => 
     selectedCategory === "Todos" || product.category === selectedCategory
   );
 
@@ -115,9 +128,16 @@ export default function Products() {
             <h1 className="text-3xl font-bold text-foreground mb-2">
               Nossos Produtos
             </h1>
-            <p className="text-muted-foreground">
-              Encontrados {filteredProducts.length} produtos
-            </p>
+            <div className="flex flex-col gap-1">
+              {isSearching && (
+                <p className="text-sm text-muted-foreground">
+                  Resultados para "{searchTerm}"
+                </p>
+              )}
+              <p className="text-muted-foreground">
+                Encontrados {filteredProducts.length} produtos
+              </p>
+            </div>
           </div>
           
           <div className="flex gap-2">
@@ -229,13 +249,24 @@ export default function Products() {
                 ? "grid-cols-1 sm:grid-cols-2 xl:grid-cols-3" 
                 : "grid-cols-1"
             }`}>
-              {filteredProducts.map((product) => (
-                <ProductCard 
-                  key={product.id} 
-                  product={product}
-                  className={viewMode === "list" ? "flex-row" : ""}
-                />
-              ))}
+              {filteredProducts.length > 0 ? (
+                filteredProducts.map((product) => (
+                  <ProductCard 
+                    key={product.id} 
+                    product={product}
+                    className={viewMode === "list" ? "flex-row" : ""}
+                  />
+                ))
+              ) : (
+                <div className="col-span-full text-center py-12">
+                  <p className="text-muted-foreground text-lg">
+                    Nenhum produto encontrado
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    Tente ajustar sua busca ou explorar nossas categorias
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Load More */}

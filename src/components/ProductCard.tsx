@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Star, Heart, ShoppingCart, Eye } from "lucide-react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Card, CardContent } from "./ui/card";
+import { useCart } from "@/contexts/CartContext";
 import { cn } from "@/lib/utils";
 
 interface Product {
@@ -27,11 +29,12 @@ interface ProductCardProps {
 export const ProductCard = ({ product, className }: ProductCardProps) => {
   const [isWishlisted, setIsWishlisted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const { addToCart } = useCart();
 
   const handleAddToCart = async () => {
     setIsLoading(true);
-    // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 800));
+    addToCart(product);
     setIsLoading(false);
   };
 
@@ -89,8 +92,11 @@ export const ProductCard = ({ product, className }: ProductCardProps) => {
               size="icon"
               variant="secondary"
               className="h-8 w-8 bg-background/90 hover:bg-background"
+              asChild
             >
-              <Eye className="h-4 w-4 text-muted-foreground" />
+              <Link to={`/produto/${product.id}`}>
+                <Eye className="h-4 w-4 text-muted-foreground" />
+              </Link>
             </Button>
           </div>
 
