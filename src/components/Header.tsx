@@ -28,9 +28,9 @@ export const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">E</span>
+              <span className="text-primary-foreground font-bold text-lg">C</span>
             </div>
-            <span className="font-bold text-xl text-foreground">EcoShop</span>
+            <span className="font-bold text-xl text-foreground">Commerce Nova Web</span>
           </Link>
 
           {/* Search Bar - Desktop */}
