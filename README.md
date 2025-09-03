@@ -1,10 +1,8 @@
-# EcoShop - E-commerce Moderno
+# Commerce Nova Web - E-commerce Moderno
 
 ## Sobre o Projeto
 
-**EcoShop** é uma plataforma de e-commerce moderna e responsiva, desenvolvida com as mais recentes tecnologias web. O projeto oferece uma experiência de compra completa com design elegante, funcionalidades avançadas e performance otimizada.
-
-**URL do Projeto**: https://lovable.dev/projects/d03c1db4-fb97-454d-815d-2327ad9aa35c
+**Commerce Nova Web** é uma plataforma de e-commerce moderna e responsiva, desenvolvida com as mais recentes tecnologias web. O projeto oferece uma experiência de compra completa com design elegante, funcionalidades avançadas e performance otimizada.
 
 ## ✨ Funcionalidades
 
@@ -25,7 +23,7 @@
 - **Roteamento**: React Router DOM
 - **Estado**: Context API + React Hooks
 - **Ícones**: Lucide React
-- **Deploy**: Lovable Platform
+- **Deploy**: Vercel / Netlify
 
 ## 🚀 Como Executar o Projeto
 
@@ -40,7 +38,7 @@
 git clone <URL_DO_SEU_REPOSITORIO>
 
 # 2. Entre no diretório do projeto
-cd ecoshop
+cd commerce-nova-web
 
 # 3. Instale as dependências
 npm install
@@ -106,41 +104,36 @@ O projeto utiliza um design system consistente baseado em:
 
 ## 📱 Como Editar o Código
 
-### **Usando Lovable (Recomendado)**
-1. Acesse o [Projeto no Lovable](https://lovable.dev/projects/d03c1db4-fb97-454d-815d-2327ad9aa35c)
-2. Use prompts em português para fazer alterações
-3. As mudanças são commitadas automaticamente
-
-### **Usando seu IDE Favorito**
+### **Usando Editor de Código**
 1. Clone o repositório
-2. Faça suas alterações localmente
-3. Commit e push para o repositório
-4. As mudanças aparecerão automaticamente no Lovable
+2. Use VS Code ou seu editor favorito
+3. Faça suas alterações localmente
+4. Commit e push para o repositório
 
-### **Editando Diretamente no GitHub**
+### **Estrutura de Desenvolvimento**
 1. Navegue até o arquivo desejado
-2. Clique no ícone de edição (lápis)
-3. Faça suas alterações e commit
+2. Faça suas alterações
+3. Teste localmente com `npm run dev`
+4. Commit suas mudanças
 
 ## 🚀 Deploy
 
-### Deploy Automático
-1. Abra o [Lovable](https://lovable.dev/projects/d03c1db4-fb97-454d-815d-2327ad9aa35c)
-2. Clique em "Share" → "Publish"
-3. Sua aplicação estará disponível publicamente
+### Deploy com Vercel
+1. Conecte seu repositório no Vercel
+2. Configure as variáveis de ambiente
+3. Deploy automático a cada push
 
-### Domínio Customizado
-Para conectar um domínio próprio:
-1. Vá em Project → Settings → Domains
-2. Clique em "Connect Domain"
-3. Siga as instruções de configuração
+### Deploy com Netlify
+1. Conecte seu repositório no Netlify
+2. Configure build command: `npm run build`
+3. Publish directory: `dist`
 
 ## 📞 Suporte
 
 Para dúvidas ou sugestões:
-- Documentação: [Lovable Docs](https://docs.lovable.dev/)
-- Comunidade: [Discord Lovable](https://discord.com/channels/1119885301872070706/1280461670979993613)
+- Abra uma issue no GitHub
+- Entre em contato através do e-mail
 
 ---
 
-Desenvolvido com ❤️ usando [Lovable](https://lovable.dev)
+Desenvolvido com ❤️ para Commerce Nova Web
